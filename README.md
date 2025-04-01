@@ -51,10 +51,3 @@ real-time-translation/
 
 
 
-
-### Additional Notes
-- Replace `your-username` with your GitHub username.
-- If you use a different translation service (e.g., Google Translate API), update the `API_KEY` description.
-- If the project has additional dependencies or configurations, add them to the **Installation Steps** section.
-
-This README should help you effectively showcase your project!
