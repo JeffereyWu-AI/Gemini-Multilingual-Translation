@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Translation Results</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 深蓝色导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #34568B;">
+    <div class="container">
+      <a class="navbar-brand mx-auto" href="#">Multilingual Translation Results</a>
+      <div class="navbar-text text-light">
+        Powered by Google LLM Gemini 2.0
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1>Translation Results</h1>
+    <div>
+      <!-- 循环遍历传入的translations列表 -->
+      {% for translation in translations %}
+      <!-- 每个翻译结果用卡片(card)展示 -->
+        <div class="card mb-3">
+          <!-- 卡片头部(card-header)显示目标语言 -->
+          <div class="card-header">
+            Language: {{ translation.language }}
+          </div>
+          <!-- 卡片正文(card-body)显示翻译内容 -->
+          <div class="card-body">
+            <p class="card-text">{{ translation.translated_text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
